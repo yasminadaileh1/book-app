@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- /mnt/c/Users/owner/projects/301folder/book-app/public/style/reset.css -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../public/style/reset.css">
+    <title>Form</title>
+</head>
+<body>
+  <header>
+    <h1>Best Books! </h1>
+  </header>
+  <main>
+    <h2> Search by Title or Author</h2>
+    <form id="create-form" action="/searches/show" method="POST">
+        <input type="text" name="keyword" placeholder="Enter a title or author" required>
+        <fieldset>
+          <label for="title">
+            <span>Title</span>
+            <input type="radio" id="title" name="search" value="title" required>
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="author">
+            <span>Author</span>
+            <input type="radio" id="author" name="search" value="author" required>
+          </label>
+        </fieldset>
+        <button class="lng-btn" type="submit">Search the Google Books API</button>
+      </form>
+  </main>
+</body>
+</html>
