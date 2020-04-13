@@ -1,1 +1,23 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <% books.forEach( books =>{ %>
+            <article>
+            <div><img src=<%= book.img_url%>></div>
+              <h4>Book: <span><%= book.title%></span></h4>
+              <p>Author: <%= book.authors%></p>
+              <p><%= book.description%></p>
+              <h5>ISBN: <%= book.isbn%></h5>
+              <h5>Bookshelf: <%= book.bookshelf%></h5>
+              <a class="taskBtn" href="/books/<%=book.id%>">View Details</a>
+            </article>
+            <% }) %>
+      </section>
+</body>
+</html>

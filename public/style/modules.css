@@ -1,0 +1,52 @@
+@media (max-width:768px){
+    body{
+        width: auto;
+        background-color: #c5c5c5;
+        /* margin: 0 auto; */
+    }
+        .list{
+            display: block;
+        }
+        ul{
+            width: 100%;
+            display: none;
+        }
+        ul li{
+            display: block;
+            text-align: center;
+        }
+        .active{
+            display: block;
+        }
+    
+    }
+    h1{
+        text-align: left;
+        font-size: 30px;
+        color: #fff;
+        background-color: black;
+        /* margin: auto; */
+    }
+    main{
+        background-color: #c5c5c5;
+        margin: auto;
+        /* width: 960px; */
+    }
+    h2{
+        color: #fff;
+        font-size: 20px;
+    }
+    button{
+        width: 50%;
+        height: 45px;
+        color: #fff;
+        background-color: black;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    
+    button:hover{
+        color: #fff;
+        background-color: #2196f3;
+        box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    }
