@@ -1,21 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show</title>
-</head>
-<body>
-    <h1>Search Results</h1>
-    <ul>
-        <% books.forEach(book => { %>
-        <li>
-            <p><%= book.title %></p>
-            <p><img src=<%= book.image_url %>></p>
-            <p><%= book.authors%></p>
-            <p><%= book.description%></p>
-        </li>
+    <head>
+        <!-- /mnt/c/Users/owner/projects/301folder/book-app/public/style/reset.css -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style/reset.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/style/base.css">
+        <link rel="stylesheet" href="/style/incons.css">
+        <link rel="stylesheet" href="/style/layout.css">
+        <link rel="stylesheet" href="/style/modules.css">
+      
+        <title>BOOKS</title>
+      </head>
+      
+      <body>
+        <header>
+          <nav>
+            <div class="list">
+              <i class="fa fa-bars menu" aria-hidden="true"></i>
+            </div>
+            <ul>
+              <li>
+                <a href="#">Home </a>
+              </li>
+              <li>
+                <a href="#">About us </a>
+              </li>
+              <li>
+                <a href="#">Books </a>
+              </li>
+              <li>
+                <a href="#">Contact </a>
+              </li>
+            </ul>
+          </nav>
+          <h1> Best Books! </h1>
+        </header>
+
+  <main>
+    <nav  class="hTow">
+    <h2>Search Results</h2>
+</nav>
+<section>
+  <ol>
+      <%books.forEach(book =>{%>
+      <li>
+          <p class="img"><img src=<%= book.img_url %>></p>
+          <p class="title"><%= book.title %></p>
+          <p class="authors"><%= book.authors%></p>
+          <p class="description"><%= book.description%></p>
+          <!-- <p><%= book.isbn%></p>
+          <p><%= book.bookshelf%></p> -->
+          <!-- <form action="/books/:books_id" method="post">
+              <input type="hidden" name="title" value="<%- book.title %>">
+              <input type="hidden" name="authors" value="<%- book.authors %>">
+              <input type="hidden" name="isbn" value="<%- book.isbn%>">
+              <input type="hidden" name="image" value="<%-  book.img_url %>">
+              <input type="hidden" name="description" value="<%- book.description %>">
+              <button type="submit">Add This Book</button>
+          </form> -->
+      </li>
         <% }) %>
-    </ul>
+  </ol>
+  </section>
+    
+
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.js">
+  </script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+
+$('.menu').click(function(){
+  $('ul').toggleClass('active')
+})
+}); 
+  </script>
 </body>
 </html>

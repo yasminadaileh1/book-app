@@ -1,34 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- /mnt/c/Users/owner/projects/301folder/book-app/public/style/reset.css -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../public/style/reset.css">
-    <title>Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style/reset.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style/base.css">
+  <link rel="stylesheet" href="/style/incons.css">
+  <link rel="stylesheet" href="/style/layout.css">
+  <link rel="stylesheet" href="/style/modules.css">
+
+  <title>Form</title>
 </head>
+
 <body>
   <header>
-    <h1>Best Books! </h1>
+    <nav>
+      <div class="list">
+        <i class="fa fa-bars menu" aria-hidden="true"></i>
+      </div>
+      <ul>
+        <li>
+          <a href="#">Home </a>
+        </li>
+        <li>
+          <a href="#">About us </a>
+        </li>
+        <li>
+          <a href="#">Books </a>
+        </li>
+        <li>
+          <a href="#">Contact </a>
+        </li>
+      </ul>
+    </nav>
+    <h1> Best Books! </h1>
   </header>
   <main>
+    <nav class="hTow">
     <h2> Search by Title or Author</h2>
-    <form id="create-form" action="/searches/show" method="POST">
-        <input type="text" name="keyword" placeholder="Enter a title or author" required>
-        <fieldset>
-          <label for="title">
-            <span>Title</span>
-            <input type="radio" id="title" name="search" value="title" required>
-          </label>
-        </fieldset>
-        <fieldset>
-          <label for="author">
-            <span>Author</span>
-            <input type="radio" id="author" name="search" value="author" required>
-          </label>
-        </fieldset>
-        <button class="lng-btn" type="submit">Search the Google Books API</button>
-      </form>
+  </nav>
+    <form id="create-form" action="/searches" method="POST">
+      <input type="text" name="keyword" placeholder="Enter a title or author" required class="inputOne">
+      <fieldset class="inputTowFie">
+        <label for="title" class="label">
+          <span>Title</span>
+          <input type="radio" id="title" name="search" value="title" class="inputTow" required >
+        </label>
+      </fieldset>
+      <fieldset class="inputTowFie">
+        <label for="author" class="label">
+          <span>Author</span>
+          <input type="radio" id="author" name="search" value="author" class="inputTow" required>
+        </label>
+      </fieldset>
+      <button class="lng-btn" type="submit">Search the Google Books API</button>
+    </form>
   </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js">
+  </script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+
+$('.menu').click(function(){
+  $('ul').toggleClass('active')
+})
+}); 
+  </script>
 </body>
+
 </html>
