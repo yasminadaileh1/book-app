@@ -1,11 +1,13 @@
 @media (max-width:768px){
     body{
-        width: auto;
+        height: auto;
         background-color: #c5c5c5;
         justify-content: center;
         /* margin: 0 auto; */
     }
-  
+  header{
+      width: auto;
+  }
         .list{
             display: block;
             height: 80px;
