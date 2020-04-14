@@ -4,16 +4,21 @@
         background-color: #c5c5c5;
         /* margin: 0 auto; */
     }
+  
         .list{
             display: block;
+            height: 80px;
         }
         ul{
             width: 100%;
             display: none;
+            background-color: black;
         }
         ul li{
             display: block;
             text-align: center;
+            background-color: black;
+            font-size: 35px;
         }
         .active{
             display: block;
@@ -22,27 +27,65 @@
     }
     h1{
         text-align: left;
-        font-size: 30px;
+        font-size: 60px;
         color: #fff;
         background-color: black;
         /* margin: auto; */
+        height: 70px;
+        line-height: 70px;
     }
     main{
         background-color: #c5c5c5;
         margin: auto;
         /* width: 960px; */
     }
+
+    .hTow{
+        background-color: hsl(240, 5%, 21%);
+        width: 100%;
+        height: 120px;
+        margin: 0px;
+        text-align: center;
+        margin: 0 auto;
+        opacity: .5;
+        line-height: 50px;
+    }
     h2{
         color: #fff;
-        font-size: 20px;
+        font-size: 40px;
+        margin: auto;
+        height: 120px;
+        line-height: 120px;
+    
     }
+    .inputOne {
+        width: 70%;
+        height: 70px;
+        text-align: center;
+        border-radius: 10px;
+        margin-top: 45px;
+    }
+    .inputTowFie {
+        width: 70%;
+        height: 70px;
+        border-radius: 10px;
+        margin: 30px auto;
+        text-align: left;
+        background-color: #7c7c7f;
+        cursor: pointer;
+    }
+    span{
+        font-size: 30px;
+    }
+
     button{
-        width: 50%;
-        height: 45px;
+        width: 70%;
+        height: 110px;
         color: #fff;
         background-color: black;
         border-radius: 8px;
         cursor: pointer;
+        font-size: 35px;
     }
     
     button:hover{
