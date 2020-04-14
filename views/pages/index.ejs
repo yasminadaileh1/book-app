@@ -3,21 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/base.css">
+    <link rel="stylesheet" href="/style/incons.css">
+    <link rel="stylesheet" href="/style/layout.css">
+    <link rel="stylesheet" href="/style/modules.css">
+    <title>index</title>
 </head>
 <body>
-    <section>
-        <% books.forEach( books =>{ %>
-            <article>
-            <div><img src=<%= book.img_url%>></div>
-              <h4>Book: <span><%= book.title%></span></h4>
-              <p>Author: <%= book.authors%></p>
-              <p><%= book.description%></p>
-              <h5>ISBN: <%= book.isbn%></h5>
-              <h5>Bookshelf: <%= book.bookshelf%></h5>
-              <a class="taskBtn" href="/books/<%=book.id%>">View Details</a>
-            </article>
+    <header>
+        <nav>
+          <div class="list">
+            <i class="fa fa-bars menu" aria-hidden="true"></i>
+          </div>
+          <ul>
+            <li>
+              <a href="#">Home </a>
+            </li>
+            <li>
+              <a href="#">About us </a>
+            </li>
+            <li>
+              <a href="#">Books </a>
+            </li>
+            <li>
+              <a href="#">Contact </a>
+            </li>
+          </ul>
+        </nav>
+        <h1> Best Books! </h1>
+      </header>
+    <main>
+        <section>
+            <ol>
+            <%booksnew.forEach(book =>{%>
+                <li>
+               <p class="img"> <img src="<%= book.image_url%>" ></p>
+               <p class="title">Book Title: <%= book.title %></p>
+               <p class="authors"><%= book.authors%></p>
+               <p class="description"><%= book.description%></p>
+               <p class="num"><%= book.isbn%></p>
+              <p>bookshelf: <%= book.bookshelf%></p>
+              <button class="hidden"><a class="booknum hidden " href="/books/<%=book.id%>">more details</a></button>
+              <!-- <button>more details</button> -->
+            </li>
             <% }) %>
-      </section>
+        </ol>
+          </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.js">
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+  
+  $('.menu').click(function(){
+    $('ul').toggleClass('active')
+  })
+  }); 
+    </script>
 </body>
 </html>
