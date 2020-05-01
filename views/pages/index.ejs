@@ -12,28 +12,7 @@
     <title>index</title>
 </head>
 <body>
-    <header>
-        <nav>
-          <div class="list">
-            <i class="fa fa-bars menu" aria-hidden="true"></i>
-          </div>
-          <ul>
-            <li>
-              <a href="#">Home </a>
-            </li>
-            <li>
-              <a href="#">About us </a>
-            </li>
-            <li>
-              <a href="#">Books </a>
-            </li>
-            <li>
-              <a href="#">Contact </a>
-            </li>
-          </ul>
-        </nav>
-        <h1> Best Books! </h1>
-      </header>
+  <%- include('../layout/header')%>
     <main>
         <section>
             <ol>
@@ -44,8 +23,8 @@
                <p class="authors"><%= book.authors%></p>
                <p class="description"><%= book.description%></p>
                <p class="num"><%= book.isbn%></p>
-              <p>bookshelf: <%= book.bookshelf%></p>
-              <button class="hidden"><a class="booknum hidden " href="/books/<%=book.id%>">more details</a></button>
+              <p class="bookshelf">bookshelf: <%= book.bookshelf%></p>
+              <button class="hidden"><a class="booknum hidden " href="detail/<%=book.id%>">more details</a></button>
               <!-- <button>more details</button> -->
             </li>
             <% }) %>

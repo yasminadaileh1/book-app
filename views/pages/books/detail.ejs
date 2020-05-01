@@ -12,41 +12,31 @@
         <title>details</title>
 </head>
 <body>
-    <header>
-        <nav>
-          <div class="list">
-            <i class="fa fa-bars menu" aria-hidden="true"></i>
-          </div>
-          <ul>
-            <li>
-              <a href="#">Home </a>
-            </li>
-            <li>
-              <a href="#">About us </a>
-            </li>
-            <li>
-              <a href="#">Books </a>
-            </li>
-            <li>
-              <a href="#">Contact </a>
-            </li>
-          </ul>
-        </nav>
-        <h1> Best Books! </h1>
-      </header>
+  <%- include('../../layout/header')%>
     <main>
         <section>
             <ol>
-                <%booknew2.forEach(book =>{%>
+               
                 <li>
-                    <p class="img"> <img src="<%= book.image_url%>" ></p>
-                    <p class="title">Book Title: <%= book.title %></p>
-                    <p class="authors"><%= book.authors%></p>
-                    <p class="description"><%= book.description%></p>
-                    <p class="num"><%= book.isbn%></p>
-                   <p>bookshelf: <%= book.bookshelf%></p>
+                    <p class="img"> <img src="<%= booknew2.image_url%>" ></p>
+                    <p class="title">Book Title: <%= booknew2.title %></p>
+                    <p class="authors"><%= booknew2.authors%></p>
+                    <p class="description"><%= booknew2.description%></p>
+                    <p class="num"><%= booknew2.isbn%></p>
+                   <p>bookshelf: <%= booknew2.bookshelf%></p>
+                   <form action="/delete/<%= booknew2.id%>" method="POST">
+                    <button class="hidden"> DELETE</button>
+                    </form>
+                    <form action="/update/<%= booknew2.id%>" method="POST" class="update">
+                      <input type="text" name="title" value="<%= booknew2.title %>">
+                      <input type="text" name="authors" value="<%= booknew2.authors %>">
+                      <input type="text" name="isbn" value="<%= booknew2.isbn%>">
+                      <input type="text" name="image_url" value="<%=  booknew2.image_url %>">
+                      <input type="text" name="description" value="<%= booknew2.description %>">
+                      <button class="updatebtn">Update</button>
+                    </form>
                 </li>
-                <% }) %>
+               
             </ol>
         </section>
     </main>
